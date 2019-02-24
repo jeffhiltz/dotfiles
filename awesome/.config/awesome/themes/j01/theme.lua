@@ -48,10 +48,10 @@ theme.border_marked = "#91231c"
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
+  taglist_square_size, theme.fg_normal
 )
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
+  taglist_square_size, theme.fg_normal
 )
 
 -- Variables set for theming notifications:
@@ -65,7 +65,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path .. "/submenu.png"
 theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_width = dpi(100)
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -105,15 +105,15 @@ theme.wallpaper = themes_path .. "/wallhaven-32869.png"
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "/layouts/fairhw.png"
 theme.layout_fairv = themes_path .. "/layouts/fairvw.png"
-theme.layout_floating  = themes_path .. "/layouts/floatingw.png"
+theme.layout_floating = themes_path .. "/layouts/floatingw.png"
 theme.layout_magnifier = themes_path .. "/layouts/magnifierw.png"
 theme.layout_max = themes_path .. "/layouts/maxw.png"
 theme.layout_fullscreen = themes_path .. "/layouts/fullscreenw.png"
 theme.layout_tilebottom = themes_path .. "/layouts/tilebottomw.png"
-theme.layout_tileleft   = themes_path .. "/layouts/tileleftw.png"
+theme.layout_tileleft = themes_path .. "/layouts/tileleftw.png"
 theme.layout_tile = themes_path .. "/layouts/tilew.png"
 theme.layout_tiletop = themes_path .. "/layouts/tiletopw.png"
-theme.layout_spiral  = themes_path .. "/layouts/spiralw.png"
+theme.layout_spiral = themes_path .. "/layouts/spiralw.png"
 theme.layout_dwindle = themes_path .. "/layouts/dwindlew.png"
 theme.layout_cornernw = themes_path .. "/layouts/cornernww.png"
 theme.layout_cornerne = themes_path .. "/layouts/cornernew.png"
@@ -122,7 +122,7 @@ theme.layout_cornerse = themes_path .. "/layouts/cornersew.png"
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(
-    theme.menu_height, theme.bg_focus, theme.fg_focus
+  theme.menu_height, theme.bg_focus, theme.fg_focus
 )
 
 -- Define the icon theme for application icons. If not set then the icons
