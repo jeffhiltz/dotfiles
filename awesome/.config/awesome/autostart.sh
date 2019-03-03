@@ -12,3 +12,5 @@ function run {
   fi
 }
 
+# use compton to eliminate tearing
+run compton -b
