@@ -14,3 +14,6 @@ function run {
 
 # use compton to eliminate tearing
 run compton -b
+
+# start network widget
+run nm-applet
