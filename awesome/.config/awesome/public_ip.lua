@@ -19,4 +19,11 @@ awful.widget.watch(public_address_script, update_interval, function(widget, stdo
   update_widget(public_address)
 end)
 
+-- How to apply theme colours in a widget:
+-- local beautiful = require("beautiful")
+-- public_ip_widget.markup = "<span background='" .. beautiful.bg_urgent .. "'>" .. public_ip_widget.text .. "</span>"
+-- public_ip_widget:connect_signal("widget::redraw_needed", function ()
+--   public_ip_widget.markup = "<span background='" .. beautiful.bg_urgent .. "'>" .. public_ip_widget.text .. "</span>"
+-- end)
+
 return public_ip_widget
