@@ -1,7 +1,7 @@
 local awful = require("awful")
 local wibox = require("wibox")
 
-local update_interval = 5 -- in seconds
+local update_interval = 60 -- in seconds
 
 local public_ip_widget = wibox.widget.textbox()
 
