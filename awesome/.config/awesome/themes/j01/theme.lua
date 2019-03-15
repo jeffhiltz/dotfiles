@@ -7,6 +7,7 @@ local theme_name = "j01"
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
+local xrdb = xresources.get_current_theme()
 
 local gfs = require("gears.filesystem")
 local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme_name
@@ -31,6 +32,26 @@ theme.border_width  = dpi(1)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
+
+-- Get colors from .Xresources
+theme.xbackground = xrdb.background
+theme.xforeground = xrdb.foreground
+theme.xcolor0     = xrdb.color0
+theme.xcolor1     = xrdb.color1
+theme.xcolor2     = xrdb.color2
+theme.xcolor3     = xrdb.color3
+theme.xcolor4     = xrdb.color4
+theme.xcolor5     = xrdb.color5
+theme.xcolor6     = xrdb.color6
+theme.xcolor7     = xrdb.color7
+theme.xcolor8     = xrdb.color8
+theme.xcolor9     = xrdb.color9
+theme.xcolor10    = xrdb.color10
+theme.xcolor11    = xrdb.color11
+theme.xcolor12    = xrdb.color12
+theme.xcolor13    = xrdb.color13
+theme.xcolor14    = xrdb.color14
+theme.xcolor15    = xrdb.color15
 
 -- There are other variable sets
 -- overriding the default one when
