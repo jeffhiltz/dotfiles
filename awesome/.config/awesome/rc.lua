@@ -92,7 +92,7 @@ end
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%b %d, %H:%M")
+mytextclock = wibox.widget.textclock("%m-%d %H:%M")
 
 local public_ip_widget = require("public_ip")
 local vpn_connected_widget = require("vpn_connected")
@@ -185,16 +185,18 @@ awful.screen.connect_for_each_screen(function(s)
 
   -- Add widgets to the wibox
   s.mywibox:setup {
-    layout = wibox.layout.align.horizontal,
+    layout = wibox.layout.flex.horizontal,
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mylayoutbox,
       s.mytaglist,
       s.mypromptbox,
     },
-    s.mytasklist, -- Middle widget
+    wibox.widget.separator,
+    -- s.mytasklist, -- Middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
+      align = "right",
       spacing = 10,
       wibox.widget.systray(),
       weather_widget,
