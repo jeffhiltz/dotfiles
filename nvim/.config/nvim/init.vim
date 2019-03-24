@@ -10,3 +10,8 @@ Plug 'vim-airline/vim-airline'
 " Plugin list ends here.  Plugins become visible to vim after this call.
 call plug#end()
 
+" tab control (ie: use spaces)
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
