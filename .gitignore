@@ -1,0 +1,5 @@
+# vim-plug plugged directory
+nvim/.config/nvim/plugged
+
+# temporary history file
+nvim/.config/nvim/.netrwhist
