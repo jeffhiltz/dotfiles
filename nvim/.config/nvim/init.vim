@@ -15,3 +15,11 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" appearance
+set number
+set title
+
+" mappings
+" remove trailing whitespace
+nmap <leader><space> :%s/\s\+$<cr>
+
