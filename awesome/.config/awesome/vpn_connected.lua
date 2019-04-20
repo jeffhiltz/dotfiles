@@ -10,6 +10,7 @@ local update_interval = 5 -- in seconds
 
 -- local vpn_widget = wibox.widget.textbox("")
 local vpn_widget = wibox.widget.textbox("\u{f023}")
+vpn_widget.font = beautiful.symbol_font
 
 local function update_widget(colour)
   vpn_widget.markup = "<span foreground='" .. colour .. "'>" .. vpn_widget.text .. "</span>"
