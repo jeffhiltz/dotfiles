@@ -1,5 +1,6 @@
 # vim-plug plugged directory
 nvim/.config/nvim/plugged
+nvim/.config/nvim/autoload
 
 # temporary history file
 nvim/.config/nvim/.netrwhist
