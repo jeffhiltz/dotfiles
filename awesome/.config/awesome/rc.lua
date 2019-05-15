@@ -98,6 +98,8 @@ local public_ip_widget = require("public_ip")
 local vpn_connected_widget = require("vpn_connected")
 local weather_widget = require("weather")
 
+-- local jeff_taglist = require("jeff_taglist")
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
   awful.button({ }, 1, function(t) t:view_only() end),
@@ -161,7 +163,7 @@ awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
 
   -- Each screen has its own tag table.
-  awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, awful.layout.layouts[2])
+  awful.tag({ "\u{f8a5}", "\u{f8a8}", "\u{f8ab}", "\u{f8ae}", "\u{f8b1}", "\u{f8b4}", "\u{f8b7}", "\u{f8ba}", "\u{f8bd}" }, s, awful.layout.layouts[2])
 
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
@@ -176,6 +178,7 @@ awful.screen.connect_for_each_screen(function(s)
   ))
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, taglist_buttons)
+  -- s.jeff_taglist = jeff_taglist(s) -- TODO does this work?  exporting a function?
 
   -- Create a tasklist widget
   s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist_buttons)
@@ -195,6 +198,7 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Middle widget
       layout = wibox.layout.align.horizontal,
       s.mytaglist,
+      -- s.jeff_taglist,
     },
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
