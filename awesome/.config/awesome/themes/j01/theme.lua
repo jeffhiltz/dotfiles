@@ -14,8 +14,8 @@ local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme_nam
 
 local theme = {}
 
-theme.font          = "Futura 10"
-theme.symbol_font   = "DejaVuSansMono Nerd Font 10"
+theme.font          = "monospace Bold 9"
+theme.symbol_font   = "monospace Bold 12" -- "DejaVuSansMono Nerd Font 10"
 
 -- Get colors from .Xresources
 theme.xbackground = xrdb.background
@@ -37,22 +37,22 @@ theme.xcolor13    = xrdb.color13
 theme.xcolor14    = xrdb.color14
 theme.xcolor15    = xrdb.color15
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
+theme.bg_normal     = theme.xbackground
+theme.bg_focus      = theme.xbackground
+theme.bg_urgent     = theme.xbackground
+theme.bg_minimize   = theme.xcolor8 -- black!
+theme.bg_systray    = theme.xbackground
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = theme.xforeground
+theme.fg_focus      = theme.xcolor14 -- cyan!
+theme.fg_urgent     = theme.xcolor9 -- red!
+theme.fg_minimize   = theme.xcolor8 -- black!
 
-theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.useless_gap   = dpi(3)
+theme.border_width  = dpi(0)
+theme.border_normal = theme.xcolor0 -- black
+theme.border_focus  = theme.xcolor8 -- black!
+theme.border_marked = theme.xcolor0 -- black
 
 -- There are other variable sets
 -- overriding the default one when
