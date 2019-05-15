@@ -96,6 +96,7 @@ mytextclock = wibox.widget.textclock("%m-%d %H:%M")
 
 local public_ip_widget = require("public_ip")
 local vpn_connected_widget = require("vpn_connected")
+local yay_count_widget = require("yay_count")
 local weather_widget = require("weather")
 
 -- local jeff_taglist = require("jeff_taglist")
@@ -206,6 +207,7 @@ awful.screen.connect_for_each_screen(function(s)
       wibox.widget.systray(),
       weather_widget,
       vpn_connected_widget,
+      yay_count_widget,
       public_ip_widget,
       mytextclock,
     },
