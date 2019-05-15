@@ -32,6 +32,9 @@ set softtabstop=2
 set number relativenumber
 set title
 
+" don't show mode under airline
+set noshowmode
+
 " searching
 set ignorecase
 set smartcase
