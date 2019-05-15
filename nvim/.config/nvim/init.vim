@@ -29,7 +29,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " appearance
-set number
+set number relativenumber
 set title
 
 " searching
