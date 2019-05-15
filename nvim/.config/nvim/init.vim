@@ -40,3 +40,8 @@ set smartcase
 " remove trailing whitespace
 nmap <leader><space> :%s/\s\+$<cr>
 
+" Control-S Save
+nmap <C-S> :w<cr>
+vmap <C-S> <esc>:w<cr>
+imap <C-S> <esc>:w<cr>
+
