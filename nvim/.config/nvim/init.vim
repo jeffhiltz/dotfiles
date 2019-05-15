@@ -32,6 +32,10 @@ set softtabstop=2
 set number
 set title
 
+" searching
+set ignorecase
+set smartcase
+
 " mappings
 " remove trailing whitespace
 nmap <leader><space> :%s/\s\+$<cr>
