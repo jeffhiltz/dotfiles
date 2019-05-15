@@ -8,6 +8,9 @@ endif
 " Plugins (vim-plug)
 call plug#begin('~/.config/nvim/plugged')
 
+" syntax highlighting
+Plug 'sheerun/vim-polyglot'
+
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
