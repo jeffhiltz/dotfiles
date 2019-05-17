@@ -3,9 +3,11 @@
 
 local awful = require("awful")
 local beautiful = require("beautiful")
+local gears = require("gears")
 local wibox = require("wibox")
 
-local update_interval = 3600 -- in seconds
+local pacman_interval = 3600 -- in seconds
+local yay_interval = 60 -- in seconds
 
 local yay_count_widget = wibox.widget.textbox()
 
@@ -25,15 +27,18 @@ local function update_widget(count)
   yay_count_widget.markup = "<span foreground='" .. colour .. "'>" .. text .. "</span>"
 end
 
-local update_count_script = [[
-  bash -c "
-  sudo pacman -Sy && yay -Pn
-  "]]
+gears.timer {
+  timeout = pacman_interval,
+  call_now = true,
+  autostart = true,
+  callback = function()
+    awful.spawn("sudo pacman -Sy")
+  end
+}
 
-awful.widget.watch(update_count_script, update_interval, function(widget, stdout, stderr, exitreason, exitcode)
+awful.widget.watch("yay -Pn", yay_interval, function(widget, stdout, stderr, exitreason, exitcode)
   if exitcode == 0 then
-    local count = tonumber(string.match(stdout, "%d+"))
-    update_widget(count)
+    update_widget(tonumber(stdout))
   else
     update_widget(-1)
   end
