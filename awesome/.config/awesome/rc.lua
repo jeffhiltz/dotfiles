@@ -49,7 +49,7 @@ local theme_name = "j01"
 beautiful.init( theme_dir .. theme_name .. "/theme.lua" )
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
@@ -271,6 +271,9 @@ globalkeys = gears.table.join(
     {description = "reload awesome", group = "awesome"}),
   awful.key({ modkey, "Shift"   }, "q", awesome.quit,
     {description = "quit awesome", group = "awesome"}),
+  awful.key({ modkey }, "d", function()
+    awful.spawn.with_shell("rofi -show combi")
+  end, {description = "rofi launcher", group = "launcher"}),
 
   awful.key({ modkey, }, "l", function () awful.tag.incmwfact( 0.05)      end,
     {description = "increase master width factor", group = "layout"}),
