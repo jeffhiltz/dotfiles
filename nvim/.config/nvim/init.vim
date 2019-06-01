@@ -44,7 +44,7 @@ set smartcase
 
 " mappings
 " remove trailing whitespace
-nmap <leader><space> :%s/\s\+$<cr>
+nmap <leader><space> :%s/\s\+$<cr>:noh<cr>
 
 " Control-S Save
 nmap <C-S> :w<cr>
