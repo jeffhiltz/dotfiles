@@ -8,6 +8,9 @@ endif
 " Plugins (vim-plug)
 call plug#begin('~/.config/nvim/plugged')
 
+" gruvbox colors
+Plug 'morhetz/gruvbox'
+
 " syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
@@ -48,3 +51,6 @@ nmap <C-S> :w<cr>
 vmap <C-S> <esc>:w<cr>
 imap <C-S> <esc>:w<cr>
 
+" colors
+set termguicolors
+colorscheme gruvbox
