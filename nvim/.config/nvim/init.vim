@@ -29,7 +29,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " appearance
-set number relativenumber
+" set number relativenumber
 set title
 
 " don't show mode under airline
