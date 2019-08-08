@@ -51,3 +51,6 @@ imap <C-S> <esc>:w<cr>
 " colors
 set termguicolors
 colorscheme gruvbox
+
+" treat svelte files as html
+au! BufNewFile,BufRead *.svelte set ft=html
