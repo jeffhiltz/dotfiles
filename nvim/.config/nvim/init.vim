@@ -17,9 +17,6 @@ Plug 'sheerun/vim-polyglot'
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
-" show vim diffs and work with hunks
-Plug 'airblade/vim-gitgutter'
-
 " status line
 Plug 'vim-airline/vim-airline'
 
