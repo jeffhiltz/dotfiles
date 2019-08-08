@@ -1,1 +1,2 @@
-set PATH $HOME/esp/xtensa-esp32-elf/bin $PATH
+set PATH ~/bin $PATH
+nvm use 10
