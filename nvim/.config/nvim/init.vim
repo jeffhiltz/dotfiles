@@ -8,6 +8,9 @@ endif
 " Plugins (vim-plug)
 call plug#begin('~/.config/nvim/plugged')
 
+" coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " gruvbox colors
 Plug 'morhetz/gruvbox'
 
