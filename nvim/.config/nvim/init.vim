@@ -23,6 +23,9 @@ Plug 'tpope/vim-fugitive'
 " status line
 Plug 'vim-airline/vim-airline'
 
+" tool for building vim colour schemes
+Plug 'lifepillar/vim-colortemplate'
+
 " Plugin list ends here.  Plugins become visible to vim after this call.
 call plug#end()
 
@@ -53,7 +56,8 @@ imap <C-S> <esc>:w<cr>
 
 " colors
 set termguicolors
-colorscheme gruvbox
+colorscheme vogel5000_hard
+let g:airline_theme = 'gruvbox'
 
 " treat svelte files as html
 au! BufNewFile,BufRead *.svelte set ft=html
