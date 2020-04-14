@@ -1,5 +1,8 @@
 ! A colourscheme inspired by Joe Bergantine's Birds of Paradise
 
+! DPI for laptop screen
+Xft.dpi: 160
+
 ! special
 *.foreground:   #dfdab7
 *.background:   #2a1e1d

@@ -1,0 +1,23 @@
+Things to do to get Awesome working well on my laptop
+---
+
+# Facts
+- laptop screen
+ - 2560 x 1440
+ - dpi
+- work monitor
+ -
+
+
+# Get Working
+o audio
+ o volumn control
+ o media keys
+o work VPN
+ o icon
+  - personal VPN should have separate icon?
+o battery/power status
+o /var/run/reboot-required
+
+
+
