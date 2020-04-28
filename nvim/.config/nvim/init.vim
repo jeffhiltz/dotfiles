@@ -63,3 +63,6 @@ let g:airline_theme = 'gruvbox'
 
 " treat svelte files as html
 au! BufNewFile,BufRead *.svelte set ft=html
+
+" treat vcv rack files as json
+au! BufNewFile,BufRead *.vcv set ft=json
