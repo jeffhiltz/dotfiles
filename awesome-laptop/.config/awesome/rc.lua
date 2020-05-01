@@ -98,6 +98,11 @@ local public_ip_widget = require("public_ip")
 local vpn_connected_widget = require("vpn_connected")
 local yay_count_widget = require("yay_count")
 local weather_widget = require("weather")
+local spotify_widget = require("spotify")
+
+local function launch_rofi()
+  awful.spawn.with_shell("rofi -show combi")
+end
 
 -- local jeff_taglist = require("jeff_taglist")
 
@@ -195,6 +200,11 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mylayoutbox,
+      spotify_widget({
+        font = 'MesloLGMDZ Nerd Font Bold 9',
+        play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+        pause_icon = '/usr/share/icons/Papirus-Light/24x24/panel/spotify-indicator.svg',
+      }),
       s.mypromptbox,
     },
     { -- Middle widget
@@ -271,9 +281,10 @@ globalkeys = gears.table.join(
     {description = "reload awesome", group = "awesome"}),
   awful.key({ modkey, "Shift"   }, "q", awesome.quit,
     {description = "quit awesome", group = "awesome"}),
-  awful.key({ modkey }, "d", function()
-    awful.spawn.with_shell("rofi -show combi")
-  end, {description = "rofi launcher", group = "launcher"}),
+  awful.key({ modkey }, "d", launch_rofi,
+    {description = "rofi launcher", group = "launcher"}),
+  awful.key({ modkey, "Control" }, "Escape", launch_rofi,
+    {description = "rofi launcher", group = "launcher"}),
 
   awful.key({ modkey, }, "l", function () awful.tag.incmwfact( 0.05)      end,
     {description = "increase master width factor", group = "layout"}),
