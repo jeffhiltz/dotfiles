@@ -14,8 +14,8 @@ local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme_nam
 
 local theme = {}
 
-theme.font          = "monospace Bold 9"
-theme.symbol_font   = "monospace Bold 12" -- "DejaVuSansMono Nerd Font 10"
+theme.font          = "MesloLGMDZ Nerd Font Bold 9"
+theme.symbol_font   = "MesloLGMDZ Nerd Font Bold 12" -- "DejaVuSansMono Nerd Font 10"
 
 -- Get colors from .Xresources
 theme.xbackground = xrdb.background
@@ -48,8 +48,8 @@ theme.fg_focus      = theme.xcolor14 -- cyan!
 theme.fg_urgent     = theme.xcolor9 -- red!
 theme.fg_minimize   = theme.xcolor8 -- black!
 
-theme.useless_gap   = dpi(3)
-theme.border_width  = dpi(0)
+theme.useless_gap   = dpi(0)
+theme.border_width  = dpi(2)
 theme.border_normal = theme.xcolor0 -- black
 theme.border_focus  = theme.xcolor8 -- black!
 theme.border_marked = theme.xcolor0 -- black
@@ -122,7 +122,7 @@ theme.titlebar_maximized_button_normal_active = themes_path .. "/titlebar/maximi
 theme.titlebar_maximized_button_focus_active  = themes_path .. "/titlebar/maximized_focus_active.png"
 
 -- theme.wallpaper = themes_path .. "/background.png"
-theme.wallpaper = themes_path .. "/wallhaven-32869.png"
+-- theme.wallpaper = themes_path .. "/wallhaven-32869.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "/layouts/fairhw.png"
