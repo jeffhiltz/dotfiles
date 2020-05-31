@@ -30,9 +30,9 @@ run xfsettingsd
 run nm-applet
 run light-locker
 run xcape -e 'Super_L=Super_L|Control_L|Escape'
-run thunar --daemon
+# run thunar --daemon
 run pa-applet
-run pamac-tray
+# run pamac-tray
 
 ## The following are not included in minimal edition by default
 ## but autorun.sh will pick them up if you install them
