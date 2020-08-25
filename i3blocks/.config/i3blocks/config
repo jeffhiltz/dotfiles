@@ -1,0 +1,58 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+# [documentation]
+# full_text=Documentaytay!
+# website=https://vivien.github.io/i3blocks
+# command=xdg-open "$website"
+# color=#fe57a1
+
+# [greetings]
+# color=#f5af19
+# command=echo "Hello, <span foreground=\"red\">$USER!</span>"
+# interval=once
+# markup=pango
+
+# [lala]
+# command=echo $0
+# interval=60
+
+[gcal]
+command=$HOME/.config/i3blocks/gcal.awk /tmp/agenda.txt
+interval=60
+markup=pango
+
+[weather]
+command=curl 'wttr.in/?format=%t\n'
+interval=900
+
+[brightness]
+command=printf " %.0f%%\n" `xbacklight`
+interval=60
+
+# [repo_update]
+# full_text=""
+# command=sudo pacman -Sy
+# interval=3600
+
+[yay_counter]
+command=$HOME/.config/i3blocks/yay.fish
+interval=60
+
+[extmon]
+full_text=
+command=~/bin/extmon.sh
+
+[time]
+command=date '+%Y.%m.%d %H:%M'
+interval=5
+
