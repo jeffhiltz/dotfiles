@@ -13,6 +13,8 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+local xrandr = require("xrandr")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -94,12 +96,12 @@ end
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock("%m-%d %H:%M")
 
-local public_ip_widget = require("public_ip")
+-- local public_ip_widget = require("public_ip")
 local vpn_connected_widget = require("vpn_connected")
 local yay_count_widget = require("yay_count")
 local weather_widget = require("weather")
-local spotify_widget = require("spotify")
-
+-- local spotify_widget = require("text_spoty")
+-- local wifi_widget = require("wifi")
 local function launch_rofi()
   awful.spawn.with_shell("rofi -show combi")
 end
@@ -200,11 +202,9 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mylayoutbox,
-      spotify_widget({
-        font = 'MesloLGMDZ Nerd Font Bold 9',
-        play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-        pause_icon = '/usr/share/icons/Papirus-Light/24x24/panel/spotify-indicator.svg',
-      }),
+      -- spotify_widget({
+        -- font = 'MesloLGMDZ Nerd Font Bold 9',
+      -- }),
       s.mypromptbox,
     },
     { -- Middle widget
@@ -214,12 +214,18 @@ awful.screen.connect_for_each_screen(function(s)
     },
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
-      spacing = 10,
+      spacing = 30,
+      spacing_widget = {
+        -- forced_width = 5,
+        orientation = "vertical",
+        widget = wibox.widget.separator,
+      },
       wibox.widget.systray(),
       weather_widget,
       vpn_connected_widget,
+      -- wifi_widget,
       yay_count_widget,
-      public_ip_widget,
+      -- public_ip_widget,
       mytextclock,
     },
   }
@@ -244,6 +250,10 @@ globalkeys = gears.table.join(
     {description = "focus next by index", group = "client"}),
   awful.key({ modkey, }, "k", function () awful.client.focus.byidx(-1) end,
     {description = "focus previous by index", group = "client"}),
+
+  -- xrandr multi-monitor support
+  awful.key({ modkey }, "p", function() xrandr.xrandr() end,
+    {description = "xrandr menu"}),
 
   -- Layout manipulation
   awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)  end,
