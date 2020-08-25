@@ -34,6 +34,8 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+let g:vim_markdown_new_list_item_indent=0
+
 " appearance
 " set number relativenumber
 set title
