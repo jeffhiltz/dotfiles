@@ -1,4 +1,4 @@
-! A colourscheme inspired by Joe Bergantine's Birds of Paradise
+! A colourscheme inspired by Birds of Paradise by Joe Bergantine
 
 ! special
 *.foreground:   #dfdab7
@@ -37,3 +37,4 @@
 *.color7:       #dfdab7
 *.color15:      #fff9d4
 
+Xft.dpi: 163
