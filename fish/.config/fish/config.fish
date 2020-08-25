@@ -1,2 +1,3 @@
 set PATH ~/bin $PATH
-nvm use 10
+nvm use 12
+alias rg "command rg -S"
