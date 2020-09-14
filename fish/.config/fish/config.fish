@@ -1,6 +1,7 @@
 set PATH ~/bin $PATH
 nvm use 12
 alias rg "command rg -S"
+alias rgh "command rg -S --hidden"
 
 alias gits "command git status"
 alias gitcm "command git commit -m"
