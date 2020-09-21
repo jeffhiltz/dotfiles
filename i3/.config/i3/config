@@ -67,6 +67,7 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w # active window
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s # selection
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 # bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+c --release exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # focus_follows_mouse no
 
