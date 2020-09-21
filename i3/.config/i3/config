@@ -267,7 +267,8 @@ bindsym $mod+9 exec --no-startup-id i3lock -c "#908578"
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # TODO what is this?
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id xsetroot -solid "#564844"
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id light-locker
@@ -335,12 +336,18 @@ bar {
         statusline #d8d3b0
         separator  #553d25
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+#                          border  backgr. text
+        focused_workspace  #6195c5 #3f76a4 #e4ddbe
+        active_workspace   #353836 #353836 #FDF6E3
+        inactive_workspace #332424 #433633 #e4ddbe
+        binding_mode       #2C2C2C #2C2C2C #F9FAF9
+        urgent_workspace   #c3302c #c3302c #e4ddbe
+#        with borders:
+#        focused_workspace  #e4ddbe #6195c5 #332424
+#        active_workspace   #595B5B #353836 #FDF6E3
+#        inactive_workspace #564844 #332424 #e4ddbe
+#        binding_mode       #16a085 #2C2C2C #F9FAF9
+#        urgent_workspace   #9d0012 #c3302c #e4ddbe
     }
 }
 
@@ -348,14 +355,14 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #fe57a1 #fdae40 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #f6711d #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000
+# class                   border  backgr. text    indic.  child_border
+  client.focused          #fdae40 #fdae40 #332424 #f6711d #fdae40
+  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948 #332424
+  client.unfocused        #fe57a1 #332424 #1ABC9C #454948 #332424
+  client.urgent           #CB4B16 #f6711d #1ABC9C #268BD2 #0000ff
+  client.placeholder      #000000 #0c0c0c #ffffff #000000 #332424
 
-  client.background       #2B2C2B
+  client.background       #2a1c1d
 
 #############################
 ### settings for i3-gaps: ###
