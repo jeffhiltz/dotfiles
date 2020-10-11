@@ -1,10 +1,10 @@
 set PATH ~/bin $PATH
 nvm use 12
-alias rg "command rg -S"
-alias rgh "command rg -S --hidden"
+abbr rg "rg -S"
+abbr rgh "rg -S --hidden"
 
-alias gits "command git status"
-alias gitcm "command git commit -m"
-alias gita "command git add"
-alias gitd "command git diff"
-alias gitdc "command git diff --cached"
+abbr gits "git status"
+abbr gitcm "git commit -m"
+abbr gita "git add"
+abbr gitd "git diff"
+abbr gitdc "git diff --cached"
