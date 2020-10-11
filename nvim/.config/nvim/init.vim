@@ -20,6 +20,12 @@ Plug 'sheerun/vim-polyglot'
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
+" quoting/parenthesizing
+Plug 'tpope/vim-surround'
+
+" commenting
+Plug 'tpope/vim-commentary'
+
 " status line
 Plug 'vim-airline/vim-airline'
 
