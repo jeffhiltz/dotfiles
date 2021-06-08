@@ -80,17 +80,17 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
@@ -153,8 +153,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x2a1e1d'
-    foreground: '0xdfdab7'
+    background: '0x2a1c1d'
+    foreground: '0xe4ddbe'
 
     # Bright and dim foreground colors
     #
@@ -183,39 +183,39 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x573d25'
-    red:     '0xC33027'
-    green:   '0x6ba08a'
-    yellow:  '0xe99c29'
-    blue:    '0x6298C4'
-    magenta: '0xab80a6'
-    cyan:    '0x33859D'
-    white:   '0xdfdab7'
+    black:   '0x2a1c1d'
+    red:     '0xd5423a'
+    green:   '0x629c84'
+    yellow:  '0xf19f2f'
+    blue:    '0x6195c5'
+    magenta: '0xaf82ab'
+    cyan:    '0x539aae'
+    white:   '0xa39a89'
 
   # Bright colors
   bright:
-    black:   '0x9a6b49'
-    red:     '0xDF5F00'
-    green:   '0x94d7ba'
-    yellow:  '0xEDB54B'
-    blue:    '0x7AB8EB'
-    magenta: '0xd09dca'
-    cyan:    '0x599CAA'
-    white:   '0xfff9d4'
+    black:   '0x908578'
+    red:     '0xf55e51'
+    green:   '0x81bda3'
+    yellow:  '0xffc151'
+    blue:    '0x82b5e7'
+    magenta: '0xd0a2cc'
+    cyan:    '0xd0a2cc'
+    white:   '0xe4ddbe'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
+  dim:
+    black:   '0x000000'
+    red:     '0xb62323'
+    green:   '0x437d65'
+    yellow:  '0xce7e02'
+    blue:    '0x3f76a4'
+    magenta: '0x8e648c'
+    cyan:    '0x307b8e'
+    white:   '0xfaf5d1'
 
   # Indexed Colors
   #
