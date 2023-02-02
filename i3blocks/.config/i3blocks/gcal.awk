@@ -6,7 +6,7 @@ BEGIN {
 
 {
   minutes_until = int(($1 - systime()) / 60);
-  if (minutes_until > 1440) {
+  if (minutes_until > 17 * 60) {
     print "No Meetings";
   }
   else if (minutes_until > 90) {
