@@ -35,9 +35,9 @@ markup=pango
 command=curl 'wttr.in/berlin?format=%t\n'
 interval=900
 
-[brightness]
-command=printf " %.0f%%\n" `xbacklight`
-interval=60
+# [brightness]
+# command=printf " %.0f%%\n" `xbacklight`
+# interval=60
 
 # [repo_update]
 # full_text=""
@@ -48,9 +48,9 @@ interval=60
 command=$HOME/.config/i3blocks/yay.fish
 interval=60
 
-[extmon]
-full_text=
-command=~/bin/extmon.sh
+# [extmon]
+# full_text=
+# command=~/bin/extmon.sh
 
 [time]
 command=date '+%Y.%m.%d %H:%M'
