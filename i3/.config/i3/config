@@ -274,15 +274,15 @@ exec --no-startup-id hsetroot -solid "#564844"
 exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id light-locker
+# exec --no-startup-id light-locker
 # exec --no-startup-id pamac-tray
 # TODO what is this?
 exec --no-startup-id clipit
 exec --no-startup-id xfsettingsd
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-# TODO i don't have xautolock installed
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker 'i3lock -c "#908578"'
+# exec --no-startup-id xidlehook --not-when-audio --timer 600 'i3lock -c "#908578"'
 # TODO what is this?
 exec_always --no-startup-id ff-theme-util
 # TODO what is this?
