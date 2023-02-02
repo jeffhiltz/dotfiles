@@ -31,8 +31,8 @@ command=$HOME/.config/i3blocks/gcal.awk /tmp/agenda.txt
 interval=60
 markup=pango
 
-[weather]
-command=curl 'wttr.in/?format=%t\n'
+[weather-berlin]
+command=curl 'wttr.in/berlin?format=%t\n'
 interval=900
 
 [brightness]
