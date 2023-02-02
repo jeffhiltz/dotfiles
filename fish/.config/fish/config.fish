@@ -1,5 +1,5 @@
 set PATH ~/bin $PATH
-nvm use 12
+nvm use 14
 abbr rg "rg -S"
 abbr rgh "rg -S --hidden"
 
