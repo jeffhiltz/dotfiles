@@ -285,7 +285,7 @@ colors:
     yellow:  '#ffc151'
     blue:    '#82b5e7'
     magenta: '#d0a2cc'
-    cyan:    '#d0a2cc'
+    cyan:    '#74bbcf'
     white:   '#e4ddbe'
 
   # Dim colors
