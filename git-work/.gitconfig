@@ -1,0 +1,10 @@
+[core]
+	pager = delta
+[user]
+	name = Jeff Hiltz
+	email = jeff.hiltz@vimcar.com
+[pull]
+	rebase = false
+	ff = only
+[delta]
+	side-by-side = true
